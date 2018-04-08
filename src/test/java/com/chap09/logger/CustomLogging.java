@@ -7,6 +7,7 @@ package com.chap09.logger;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,7 +19,7 @@ public class CustomLogging implements ITestListener {
     //Called when the test-method execution starts
     @Override
     public void onTestStart(ITestResult result) {
-        System.out.println("Test method started: " + result.getName() +" and time is: " + getCurrentTime());
+        System.out.println("Test method started: " + result.getName() + " and time is: " + getCurrentTime());
     }
 
     //Called when the test-method execution is a success
@@ -43,8 +44,7 @@ public class CustomLogging implements ITestListener {
 
     //Called when the test-method fails within success percentage
     @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult
-                                                               result) {
+    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 // Leaving blank
     }
 
